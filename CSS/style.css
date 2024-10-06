@@ -1,0 +1,52 @@
+/* Reset styles */
+*{
+    background-color: black;
+    
+}
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+.Home-img{
+    float: right;
+    height: 800px;
+    transform: rotate(10deg);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#btn{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: #dc3545;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+   letter-spacing: 1px;
+    
+}
+
