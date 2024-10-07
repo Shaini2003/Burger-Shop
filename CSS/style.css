@@ -66,6 +66,7 @@ nav a {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    cursor: pointer;
     
 }
 
@@ -73,20 +74,11 @@ nav a {
     font-weight: bold;
 }
 
-.rating {
-    display: flex;
-    justify-content: center;
-}
 
-.rating::before {
-    content: "★★★★★";
-    font-size: 20px;
-    color: gold;
-}
 #new-arrivals{
     background-color: white;
     color: white;
-    padding: 20px;
+    padding: 50px;
 }
 #arrivals{
     background-color: white;
@@ -94,5 +86,54 @@ nav a {
     text-align: center;
     font-weight: bold;
 }
+
+  
+
+  footer {
+    background-color:black;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  
+  .social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-media li {
+    margin: 0 10px;
+  }
+  
+  .social-media a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-links {
+    flex: 1;
+    display: flex;
+    justify-content:space-between;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .copyright {
+    text-align: center;
+  }
 
 
