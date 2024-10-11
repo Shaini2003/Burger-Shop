@@ -9,14 +9,15 @@ if(isset($_POST["submit"])){
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    $emptyInputs =emptyInputSignup($name,$phone,$email,$pwd,$pwdRepeat);
-    $invalidUid = invalidUid($name);
+    $emptyInput =emptyInputSignup($name,$phone,$email,$pwd,$pwdRepeat);
+    $invalidUid = invalidUid($email);
+    $invalidName = invalidName($name);
+    $invalidEmail=invalidEmail($email);
     $invalidPhone =invalidPhone($phone);
-    $invalidEmail = invalidEmail($email);
     $pwdMatch = pwdMatch($pwd , $pwdRepeat);
-    $uidExists =uidExists($conn,$email);
+    $uidExists =uidExists($conn,$name,$email);
 
-    if ($emptyInputs !== false){
+    if ($emptyInput !== false){
         header("Location:../signup.php?error=emptyinput");
         exit();
     }
@@ -24,14 +25,19 @@ if(isset($_POST["submit"])){
         header("Location:../signup.php?error=invaliduid");
         exit();
     }
+    if($invalidEmail !== false){
+        header("Location:../signup.php?error=invalidemail");
+        exit();
+    }
+    if($invalidName !== false){
+        header("Location:../signup.php?error=invalidname");
+        exit();
+    }
     if ($invalidPhone !== false){
         header("Location:../signup.php?error=invalidPhone");
         exit();
     }
-    if ($invalidEmail !== false){
-        header("Location:../signup.php?error=invalidEmail");
-        exit();
-    }
+    
     if ($pwdMatch !== false){
         header("Location:../signup.php?error=passwordsdontmatch");
         exit();
@@ -40,7 +46,7 @@ if(isset($_POST["submit"])){
         header("Location:../signup.php?error=emailtaken");
         exit();
     }
-
+createUser($conn,$name,$phone,$email,$pwd);
 
 }
 else{
