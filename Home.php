@@ -15,7 +15,7 @@
         <nav>
             <ul>
                 <li><img src="Media/burger hub icon.jpg" width="70px"></li>
-                <li><a href="#">HOME</a></li>
+                <li><a href="#home">HOME</a></li>
                 <li><a href="#">MENU</a></li>
                 <li><a href="#about-us">ABOUT US</a></li>
                 <li><a href="#">CONTACTS</a></li>
@@ -23,7 +23,7 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-light" type="submit">Search</button>
                   </form></li>
-                <li><a href="Login.html"><img src="Media/user-interface.png" width="40px" height="40px"></a></li>
+                <li><a href="Login.php"><img src="Media/user-interface.png" width="40px" height="40px"></a></li>
             </ul>
         </nav>
         <div style="text-align: center;padding: 60px;">

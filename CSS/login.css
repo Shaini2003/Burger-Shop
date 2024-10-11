@@ -2,10 +2,22 @@ body {
     font-family: Arial, sans-serif;
     
 }
+.header {
+    color: #fff;
+    padding: 20px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    justify-content:left;
+    justify-content: space-between;
+    color: #fff;
+}
+
+nav a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
 }
 
 .container {
