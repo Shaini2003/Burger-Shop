@@ -6,10 +6,9 @@ if(isset($_POST["submit"])){
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if (emptyInputs($email, $pwd) !== false){
+    if ($emptyInputs($email, $pwd) !== false){
         exit();
     }
-    LoginUser($email, $pwd);
 
 }
 else{

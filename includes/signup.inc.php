@@ -13,8 +13,8 @@ if(isset($_POST["submit"])){
     $invalidUid = invalidUid($name);
     $invalidPhone =invalidPhone($phone);
     $invalidEmail = invalidEmail($email);
-    $pwdMatch = pwdMatch($pwd , $pwdMatch);
-    $uidExists =uidExists($conn,$name,$email);
+    $pwdMatch = pwdMatch($pwd , $pwdRepeat);
+    $uidExists =uidExists($conn,$email);
 
     if ($emptyInputs !== false){
         header("Location:../signup.php?error=emptyinput");
@@ -37,7 +37,7 @@ if(isset($_POST["submit"])){
         exit();
     }
     if ($uidExists !== false){
-        header("Location:../signup.php?error=nametaken");
+        header("Location:../signup.php?error=emailtaken");
         exit();
     }
 
